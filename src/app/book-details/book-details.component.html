@@ -1,0 +1,32 @@
+<div class="book-details-container">
+    <div class="book-details-section" *ngIf="data">
+        <div class="book-cover">
+            <img [src]='data.coverImg'>
+        </div>
+        <div class="book-info">
+            <h1>{{data.title}}</h1>
+            <section>
+                <p><b>Original Title:</b> {{data.original_title}}</p>
+                <p><b>Language:</b> {{data.language}}</p>
+                <p><b>Author:</b> {{data.author_romanized}}</p>
+                <p><b>Release Date:</b> {{data.firstPrinted}}</p>
+                <p><b>Book Type:</b> {{data.bookType}}</p>
+                <p><b>Genre:</b> {{data.genre}}</p>
+                <p><b>ISBN-13:</b> {{data.isbn}}</p>
+            </section>
+                <section *ngIf="data.description.length != 0">
+                    <h2>Description</h2>
+                    <p>{{data.description}}</p>
+                </section>
+        </div>
+
+    </div>
+
+<!--     
+    <div class="book-review">
+        <h1>Review</h1>
+        <p>{{data.review}}</p>
+    </div> -->
+
+</div>
+
