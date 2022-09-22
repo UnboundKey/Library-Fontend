@@ -1,0 +1,36 @@
+<form action="" method="post" #BookInsertForm="ngForm">
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.title" name="title" placeholder="Title">
+    </div>
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.original_title" name="orgtitle" placeholder="Original Title">
+    </div>
+    
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.description" name="description" placeholder="Description">
+    </div>
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.coverImg" name="coverimg" placeholder="Img Link">
+    </div>
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.author_romanized" name="author_romanized" placeholder="Author (Roman Characters)">
+    </div>
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.isbn" name="isbn" placeholder="isbn">
+    </div>
+    
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.language" name="language" placeholder="Language">
+    </div>
+
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.bookType" name="firstPrinted" placeholder="Book Type">
+    </div>
+    
+    <div class="form-text-field">
+        <input type="text" [(ngModel)]="form.firstPrinted" name="firstPrinted" placeholder="First Printed">
+    </div>
+    <div>
+        <input class="btn submit round" type="button" (click)="save()" value="Submit">
+    </div>
+</form>
