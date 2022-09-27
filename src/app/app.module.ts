@@ -12,6 +12,7 @@ import { BookListTableComponent } from './book-list-table/book-list-table.compon
 import { BookListAddComponent } from './book-list-add/book-list-add.component';
 
 import { FormsModule } from '@angular/forms';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     SeriesDetailsComponent,
     BookListTableComponent,
     BookListAddComponent,
+    ProductEditComponent,
   ],
   imports: [
     BrowserModule,

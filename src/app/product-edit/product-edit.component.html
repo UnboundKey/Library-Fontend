@@ -1,0 +1,37 @@
+
+<div>
+    <h1>Edit {{dataObj.title}}</h1>
+    <form action="" method="post" #BookInsertForm="ngForm">
+            <!-- <input type="text" [(ngModel)]="dataObj.title" name="title" placeholder="Title" [value]="dataObj.id"> -->
+            <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.title" name="title" placeholder="Title" [value]="dataObj.title">
+            <input type="text" [(ngModel)]="dataObj.original_title" name="orgtitle" placeholder="Original Title" [value]="dataObj.original_title">
+        </div>
+        
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.description" size="50" name="description" placeholder="Description" [value]="dataObj.description">
+        </div>
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.isbn" name="isbn" placeholder="isbn" [value]="dataObj.isbn">
+            <input type="text" [(ngModel)]="dataObj.author_romanized" name="author_romanized" placeholder="Author (Roman Characters)" [value]="dataObj.author_romanized">
+        </div>
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.coverImg" size="50" name="coverimg" placeholder="Img Link" [value]="dataObj.coverImg">
+        </div>
+        
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.language" name="language" placeholder="Language" [value]="dataObj.language">
+        </div>
+    
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.bookType" name="bookType" placeholder="Book Type" [value]="dataObj.bookType">
+        </div>
+        
+        <div class="form-text-field">
+            <input type="text" [(ngModel)]="dataObj.firstPrinted" name="firstPrinted" placeholder="First Printed" [value]="dataObj.firstPrinted">
+        </div>
+        <div>
+            <input class="btn submit round" type="button" (click)="save()" value="Submit">
+        </div>
+    </form>
+</div>

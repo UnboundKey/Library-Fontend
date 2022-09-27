@@ -4,12 +4,14 @@
         <th>Id</th>
         <th>title</th>
         <th>description</th>
+        <th>Language</th>
         <th>Actions</th>
         <tr *ngFor="let things of data">
             <td>{{things.id}}</td>
             <td>{{things.title}}</td>
             <td>{{things.description.slice(0, 75)}}..</td>
-            <td><a routerLink="/" class="btn submit">Edit</a><button class="btn" (click)="deleteBook(things.id)">Delete</button></td>
+            <td>{{things.language}}</td>
+            <td><a routerLink="/books/manage/edit/{{things.id}}" class="btn">Edit</a><a class="btn danger" (click)="deleteBook(things.id)">Delete</a></td>
         </tr>
     </table>
 </div>

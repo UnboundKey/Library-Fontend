@@ -17,7 +17,7 @@ export class BookListTableComponent implements OnInit {
   data : any;
 
   populateList() {
-    this.http.get(environment.API_URL + "Books").subscribe((res :any) => {this.data = res; console.log(this.data)} )
+    this.http.get(environment.API_URL + "Books").subscribe((res :any) => {this.data = res} )
   }
 
   ngOnInit(): void {

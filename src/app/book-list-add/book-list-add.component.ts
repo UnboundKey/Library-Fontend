@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { BookListTableComponent } from '../book-list-table/book-list-table.component';
 
 @Component({
   selector: 'app-book-list-add',
@@ -42,13 +41,18 @@ export class BookListAddComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  edit() {
+    let headers = new HttpHeaders()
+    headers.append('Content-Type', 'application/json; charset=utf-8')
+    this.http.put(environment.API_URL + "Books", this.form, {headers}).subscribe((res :any) => {console.log(res)});
+    this.route.navigate(["books/manage"]);
+  }
 
   save() {
     let headers = new HttpHeaders()
     headers.append('Content-Type', 'application/json; charset=utf-8')
     this.http.post(environment.API_URL + "Books", this.form, {headers}).subscribe((res :any) => {console.log(res)});
-    this.route.navigate(["manage"]);
+    this.route.navigate(["books/manage"]);
   }
 
 }
