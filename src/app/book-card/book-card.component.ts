@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BookCardComponent implements OnInit {
   @Input()
   book : any;
+  
   constructor() { }
 
   ngOnInit(): void {
