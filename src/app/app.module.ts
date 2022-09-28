@@ -13,6 +13,7 @@ import { BookListAddComponent } from './book-list-add/book-list-add.component';
 
 import { FormsModule } from '@angular/forms';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { BookCardComponent } from './book-card/book-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     BookListTableComponent,
     BookListAddComponent,
     ProductEditComponent,
+    BookCardComponent,
   ],
   imports: [
     BrowserModule,
