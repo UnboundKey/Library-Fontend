@@ -31,6 +31,7 @@ export class BookListAddComponent implements OnInit {
     language: "",
     bookType: "",
     "review": "",
+    series : [],
 };
    PopulateList() {
     this.http.get(environment.API_URL + "Books").subscribe(o => {
