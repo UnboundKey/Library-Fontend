@@ -1,23 +1,8 @@
 
-<div>
+<div class="book-list-container">
     <h1>Book Collection</h1>
-    <div class="book-list" *ngIf="data">
-        <div class="book-entry" *ngFor="let book of data">
-            <section class="cover-container">
-                <img [src]="book.coverImg">
-            </section>
-            <section class="book-info">
-                <h1>{{book.title}}</h1>
-                <!-- <p>{{book.original_title}}</p> -->
-                <p>{{book.language}} | {{book.author_romanized}}</p>
-                <p></p>
-                <p>{{book.firstPrinted}}</p>
-                <!-- <p>{{book.short_description}}</p> -->
-                <!-- <p>{{book.bookType}}</p> -->
-
-            </section>
-            <a routerLink="/books/{{book.id}}">Details</a>
-        </div>
+    <div class="book-list" *ngIf="data" >
+        <app-book-card *ngFor="let book of data" [book] = "book"></app-book-card>
     </div>
 
 </div>
